@@ -26,6 +26,14 @@ public class Drone {
         logString = logString + droneID;
     }
 
+
+
+
+    /**
+     *
+     * @param products
+     * @param loadLocation
+     */
     public void load(ArrayList<ArrayList<Product>> products, Cell loadLocation){
         if(loadLocation != destinationCell){
             turnAvailable = turnAvailable + transportCost(destinationCell, loadLocation);
@@ -38,6 +46,11 @@ public class Drone {
         }
     }
 
+    /**
+     *
+     * @param products
+     * @param deliverLocation
+     */
     public void deliver(ArrayList<ArrayList<Product>> products, Cell deliverLocation){
         if(deliverLocation != destinationCell){
             turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
@@ -50,9 +63,21 @@ public class Drone {
         }
     }
 
-    public void unload(){
-
-
+    /**
+     *
+     * @param products
+     * @param deliverLocation
+     */
+    public void unload(ArrayList<ArrayList<Product>> products, Cell deliverLocation){
+        if(deliverLocation != destinationCell){
+            turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
+            destinationCell = deliverLocation;
+            productList = new ArrayList<ArrayList<Product>>(4) ;
+            turnAvailable++;                                // unloading costs 1 turn
+        } else {
+            productList = new ArrayList<ArrayList<Product>>(4) ;
+            turnAvailable++;                                // unloading costs 1 turn
+        }
     }
 
     /**
