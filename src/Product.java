@@ -13,4 +13,11 @@ public class Product {
         this.id = id;
     }
 
+    /**
+     * This method gets the id of the product.
+     * @return the id of the product
+     */
+    public int getProductId() {
+        return id;
+    }
 }
