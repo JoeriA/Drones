@@ -42,10 +42,10 @@ public class Drone {
         if(deliverLocation != destinationCell){
             turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
             destinationCell = deliverLocation;
-            productList = products;
+            productList = new ArrayList<ArrayList<Product>>(4) ;
             turnAvailable++;                                // delivering costs 1 turn
         } else {
-            productList = products;
+            productList = new ArrayList<ArrayList<Product>>(4) ;
             turnAvailable++;                                // delivering costs 1 turn
         }
     }
@@ -60,7 +60,7 @@ public class Drone {
      * @param turns
      */
     public void waitDrone(int turns){
-        turn = turn + turns;
+        turnAvailable = turnAvailable + turns;
     }
 
     /**
