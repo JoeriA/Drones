@@ -8,7 +8,7 @@ public class Product {
     /**
      * Constructor of a Product.
      */
-    public Product(weight, id){
+    public Product(int weight, int id){
         this.weight = weight;
         this.id = id;
     }
