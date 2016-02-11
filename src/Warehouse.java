@@ -3,7 +3,7 @@
  */
 public class Warehouse {
     private Cell location;
-    private ArrayList<ArrayList<>> currentProductStock;
+    private ArrayList<ArrayList<Product>> currentProductStock;
 
     public Warehouse(){
 

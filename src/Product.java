@@ -3,14 +3,28 @@
  */
 public class Product {
     private int weight;
-    private int id;
+    private int productId;
 
     /**
      * Constructor of a Product.
      */
-    public Product(weight, id){
+    public Product(int weight){
         this.weight = weight;
-        this.id = id;
     }
 
+    /**
+     * Getter method for the Weight
+     * @return returns a int representing the weight of the product.
+     */
+    public int getWeight(){
+        return weight;
+    }
+
+    /**
+     * Getter for the product Id
+     * @return
+     */
+    public int getProductId(){
+        return productId;
+    }
 }

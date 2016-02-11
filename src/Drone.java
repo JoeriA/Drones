@@ -5,6 +5,7 @@ import java.util.ArrayList;
  * Created by laure on 2/11/2016.
  */
 public class Drone {
+    private int droneID;
     private int maxCapacity;
     private ArrayList<ArrayList<Product>> productList;
     private int destinationCell;

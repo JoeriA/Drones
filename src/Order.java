@@ -8,10 +8,15 @@ public class Order {
     private int[] stillNeeded;
     private boolean isCompleted;
     private int turnCompleted;
-    private ArrayList<ArrayList<Product>> productReceived;
-    private int[] originalRequest;
+    //private ArrayList<ArrayList<Product>> productReceived;
+    private int[] initialRequest;
 
-    public Order(){
+    public Order(Cell orderDestination,int[] initialRequest){
         isCompleted = false;
+        this.initialRequest = initialRequest;
+    }
+
+    public checkComplete(){
+
     }
 }
