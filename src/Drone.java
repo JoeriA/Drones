@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 /**
+ * Eventually
  * Created by laure on 2/11/2016.
  */
 public class Drone {
@@ -9,13 +10,19 @@ public class Drone {
     private int destinationCell;
     private int turn;
 
+    /**
+     * Constructor of a Drone.
+     * @param maxCapacity Maximum Capacity
+     * @param startCell the starting cell of this Drone
+     */
     public Drone(int maxCapacity, int startCell){
+        this.maxCapacity = maxCapacity;
         destinationCell = startCell;
         turn = 0;
-
+        productList = new ArrayList<ArrayList<Product>>(4);
     }
 
-    public void load(){
+    public void load(ArrayList<ArrayList<Product>> products,  ){
 
     }
 
@@ -24,6 +31,7 @@ public class Drone {
     }
 
     public void unload(){
+        if()
 
     }
 
@@ -31,5 +39,8 @@ public class Drone {
 
     }
 
+    public static void calculateEuclidian(){
+
+    }
 
 }
