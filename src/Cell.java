@@ -6,7 +6,7 @@ import java.util.List;
  * This Cell Class represents a Cell in the World matrix. The characterstics of the Cell is described by the x and y value
  * of the point in space of the matrix. But also the amount of wealth it has, the creatures that are located in the cell
  * and to which world this Cell belongs.
- * Created by laurens on 2/1/2016.
+ * Created by laure on 2/1/2016.
  */
 public class Cell implements Comparable<Cell> {
     // initialisation

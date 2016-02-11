@@ -8,8 +8,8 @@ import java.util.List;
  * Created by laurens on 2/1/2016.
  */
 public class World {
-    private int width;
-    private int height;
+    private int maxX;
+    private int maxY;
     private List<Cell> cellList = new ArrayList<Cell>();
 
     /**
@@ -23,9 +23,9 @@ public class World {
      * @param w is an integer representing the width of the new World.
      * @param h is an integer representing the length of the new World.
      */
-    public World(int w, int h) {
+    public World(int x, int h) {
         // initialisation
-        width = w;
+        maxX= w;
         height = h;
 
         // creates new cells, makes in total w*h.
