@@ -50,6 +50,22 @@ public class Warehouse {
     }
 
     /**
+     * This method gets the location of the warehouse.
+     * @return the location of the warehouse
+     */
+    public Cell getLocation() {
+        return location;
+    }
+
+    /**
+     * This method gets the id of the warehouse.
+     * @return the id of the warehouse
+     */
+    public int idWarehouse() {
+        return idWarehouse;
+    }
+
+    /**
      * This method adds an order to the assigned order list.
      * @param o the order that needs to be added to the order list
      */
