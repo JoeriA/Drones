@@ -5,8 +5,12 @@ public class Product {
     private int weight;
     private int id;
 
+    /**
+     * Constructor of a Product.
+     */
     public Product(weight, id){
-
+        this.weight = weight;
+        this.id = id;
     }
 
 }
