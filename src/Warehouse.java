@@ -63,7 +63,6 @@ public class Warehouse {
      * @param value the new amount of products of type id that are needed
      */
     public void setProductsStillNeeded(int id, int value) {
-        //value hoe hoog de waarde
         productsStillNeeded.set(id, value);
     }
 }
