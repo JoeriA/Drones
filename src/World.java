@@ -5,7 +5,7 @@ import java.util.List;
  * @author L.J.R. Weijs
  * This Class represents a world, this world has a size containing the width and height. This world regulated the Cells
  * in it. For further information for a Cell please have a look at the Cell class.
- * Created by laure on 2/1/2016.
+ * Created by laurens on 2/1/2016.
  */
 public class World {
     private int width;
