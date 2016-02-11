@@ -27,12 +27,5 @@ public class Product {
      */
     public int getProductId(){
         return productId;
-=======
-     * This method gets the id of the product.
-     * @return the id of the product
-     */
-    public int getProductId() {
-        return id;
->>>>>>> origin/master
     }
 }
