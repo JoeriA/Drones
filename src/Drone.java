@@ -105,16 +105,44 @@ public class Drone {
         return logString;
     }
 
-
+    /**
+     *
+     * @return
+     */
     public int getTurnAvailable(){
         return turnAvailable;
     }
 
-    private int droneID;
-    private int maxCapacity;
-    private ArrayList<ArrayList<Product>> productList;
-    private Cell destinationCell;
-    private int turnAvailable;
-    private String logString;
+    /**
+     *
+     * @return
+     */
+    public int getdroneID(){
+        return droneID;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getMaxCapacity(){
+        return maxCapacity;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<ArrayList<Product>> getProductList(){
+        return productList;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Cell getDestinationCell(){
+        return  destinationCell;
+    }
 
 }
