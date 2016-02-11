@@ -26,67 +26,64 @@ public class Drone {
         logString = logString + droneID;
     }
 
-
-
-
-    /**
-     *
-     * @param products
-     * @param loadLocation
-     */
-    public void load(ArrayList<ArrayList<Product>> products, Cell loadLocation){
-        if(loadLocation != destinationCell){
-            turnAvailable = turnAvailable + transportCost(destinationCell, loadLocation);
-            destinationCell = loadLocation;
-            productList = products;
-            turnAvailable++;                                // loading costs 1 turn
-        } else {
-            productList = products;
-            turnAvailable++;                                // loading costs 1 turn
-        }
-    }
-
-    /**
-     *
-     * @param products
-     * @param deliverLocation
-     */
-    public void deliver(ArrayList<ArrayList<Product>> products, Cell deliverLocation){
-        if(deliverLocation != destinationCell){
-            turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
-            destinationCell = deliverLocation;
-            productList = new ArrayList<ArrayList<Product>>(4) ;
-            turnAvailable++;                                // delivering costs 1 turn
-        } else {
-            productList = new ArrayList<ArrayList<Product>>(4) ;
-            turnAvailable++;                                // delivering costs 1 turn
-        }
-    }
-
-    /**
-     *
-     * @param products
-     * @param deliverLocation
-     */
-    public void unload(ArrayList<ArrayList<Product>> products, Cell deliverLocation){
-        if(deliverLocation != destinationCell){
-            turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
-            destinationCell = deliverLocation;
-            productList = new ArrayList<ArrayList<Product>>(4) ;
-            turnAvailable++;                                // unloading costs 1 turn
-        } else {
-            productList = new ArrayList<ArrayList<Product>>(4) ;
-            turnAvailable++;                                // unloading costs 1 turn
-        }
-    }
-
-    /**
-     *
-     * @param turns
-     */
-    public void waitDrone(int turns){
-        turnAvailable = turnAvailable + turns;
-    }
+//    /**
+//     *
+//     * @param products
+//     * @param loadLocation
+//     */
+//    public void load(ArrayList<ArrayList<Product>> products, Cell loadLocation){
+//        if(loadLocation != destinationCell){
+//            turnAvailable = turnAvailable + transportCost(destinationCell, loadLocation);
+//            destinationCell = loadLocation;
+//            productList = products;
+//            turnAvailable++;                                // loading costs 1 turn
+//        } else {
+//            productList = products;
+//            turnAvailable++;                                // loading costs 1 turn
+//        }
+//    }
+//
+//    /**
+//     *
+//     * @param products
+//     * @param deliverLocation
+//     */
+//    public void deliver(ArrayList<ArrayList<Product>> products, Cell deliverLocation){
+//        if(deliverLocation != destinationCell){
+//            turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
+//            destinationCell = deliverLocation;
+//            productList = new ArrayList<ArrayList<Product>>(4) ;
+//            turnAvailable++;                                // delivering costs 1 turn
+//        } else {
+//            productList = new ArrayList<ArrayList<Product>>(4) ;
+//            turnAvailable++;                                // delivering costs 1 turn
+//        }
+//    }
+//
+//    /**
+//     *
+//     * @param products
+//     * @param deliverLocation
+//     */
+//    public void unload(ArrayList<ArrayList<Product>> products, Cell deliverLocation){
+//        if(deliverLocation != destinationCell){
+//            turnAvailable = turnAvailable + transportCost(destinationCell, deliverLocation);
+//            destinationCell = deliverLocation;
+//            productList = new ArrayList<ArrayList<Product>>(4) ;
+//            turnAvailable++;                                // unloading costs 1 turn
+//        } else {
+//            productList = new ArrayList<ArrayList<Product>>(4) ;
+//            turnAvailable++;                                // unloading costs 1 turn
+//        }
+//    }
+//
+//    /**
+//     *
+//     * @param turns
+//     */
+//    public void waitDrone(int turns){
+//        turnAvailable = turnAvailable + turns;
+//    }
 
     /**
      * This method will calculate how much turns it will take to travel from cell 1 to cell 2.
@@ -112,5 +109,12 @@ public class Drone {
     public int getTurnAvailable(){
         return turnAvailable;
     }
+
+    private int droneID;
+    private int maxCapacity;
+    private ArrayList<ArrayList<Product>> productList;
+    private Cell destinationCell;
+    private int turnAvailable;
+    private String logString;
 
 }
