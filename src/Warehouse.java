@@ -8,6 +8,9 @@ import java.util.ArrayList;
 public class Warehouse {
     private Cell location;
     private ArrayList<ArrayList<Product>> currentProductStock;
+    private ArrayList<Order> assignedOrders;
+    private ArrayList<Integer> productsStillNeeded;
+    private final int idWarehouse;
 
     /**
      * The constructor stores the location and initial stock of the warehouse.
@@ -15,9 +18,10 @@ public class Warehouse {
      * @param initialStock 2-dimensional Array with all products initially in stock in the form of all Product objects
      *                     of one type in one Array. Cell 0 corresponds to an Array with all products of type 0.
      */
-    public Warehouse(Cell location, ArrayList<ArrayList<Product>> initialStock){
+    public Warehouse(Cell location, ArrayList<ArrayList<Product>> initialStock, int idWarehouse){
         this.location = location;
         currentProductStock = initialStock;
+        this.idWarehouse = idWarehouse;
     }
 
     /**
@@ -45,4 +49,21 @@ public class Warehouse {
         currentProductStock.set(id,productType);
     }
 
+    /**
+     * This method adds an order to the assigned order list.
+     * @param o the order that needs to be added to the order list
+     */
+    public void addOrder(Order o) {
+        assignedOrders.add(o);
+    }
+
+    /**
+     * This method sets the amount of products of a certain type (id) that is still needed.
+     * @param id type of the product
+     * @param value the new amount of products of type id that are needed
+     */
+    public void setProductsStillNeeded(int id, int value) {
+        //value hoe hoog de waarde
+        productsStillNeeded.set(id, value);
+    }
 }
